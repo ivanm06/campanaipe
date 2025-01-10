@@ -1,7 +1,9 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @next/next/no-sync-scripts */
 import "@/styles/globals.css"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { AlertTriangle, Briefcase, HeartHandshake, PhoneCall } from 'lucide-react'
+import { AlertTriangle, Briefcase, HeartHandshake, MailIcon } from 'lucide-react'
 import Link from "next/link"
 import Image from "next/image"
 
@@ -35,29 +37,29 @@ export default function CampanaRiesgosLaborales() {
         <section className="py-20 px-6">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold mb-10 text-center">Carteles Informativos</h2>
-            <div className="grid md:grid-cols-2 gap-10">
-              <div className="relative aspect-[3/4] bg-muted rounded-lg overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-10 justify-items-center">
+              <div className="relative aspect-[3/4] bg-muted rounded-lg overflow-hidden h-[80vh]">
                 <Image
-                  src="/placeholder.svg?height=600&width=450"
+                  src="/cartel1.jpg"
                   alt="Cartel informativo sobre acoso laboral"
                   layout="fill"
                   objectFit="cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-green-800 text-white p-4">
                   <h3 className="text-xl font-semibold">Acoso Laboral</h3>
-                  <p>Información y recursos para combatir el acoso en el trabajo</p>
+                  <p>No al acoso, sí a la dignidad</p>
                 </div>
               </div>
-              <div className="relative aspect-[3/4] bg-muted rounded-lg overflow-hidden">
+              <div className="relative aspect-[3/4] bg-muted rounded-lg overflow-hidden h-[80vh]">
                 <Image
-                  src="/placeholder.svg?height=600&width=450"
+                  src="/cartel2.jpg"
                   alt="Cartel informativo sobre carga excesiva de trabajo"
                   layout="fill"
                   objectFit="cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-green-800 text-white p-4">
                   <h3 className="text-xl font-semibold">Carga Excesiva de Trabajo</h3>
-                  <p>Cómo identificar y manejar la sobrecarga laboral</p>
+                  <p>Desconecta para reconectar</p>
                 </div>
               </div>
             </div>
@@ -135,9 +137,19 @@ export default function CampanaRiesgosLaborales() {
         <section className="py-20 px-6 bg-secondary">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold mb-10 text-center">Cuestionario de Evaluación</h2>
-            <div className="aspect-video bg-white rounded-lg overflow-hidden">
+            <div className="bg-white rounded-lg overflow-auto max-h-[80vh]">
               <div className="w-full h-full flex items-center justify-center text-gray-500">
-                <p>El cuestionario se cargará aquí cuando esté disponible.</p>
+                <iframe
+                  id="JotFormIFrame-250082490759361"
+                  title="Carga Mental en el Trabajo"
+                  allowTransparency={true}
+                  allow="geolocation; microphone; camera; fullscreen"
+                  src="https://form.jotform.com/250082490759361"
+                  style={{minWidth: "100%", maxWidth: "100%", height:"auto", border: "none", overflow: "auto"}}
+                >
+                </iframe>
+                <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+                <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-250082490759361']", "https://form.jotform.com/")</script>
               </div>
             </div>
           </div>
@@ -154,9 +166,11 @@ export default function CampanaRiesgosLaborales() {
                   <CardDescription>Reporta casos de acoso laboral de forma confidencial</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Button className="w-full">
-                    <PhoneCall className="mr-2 h-4 w-4" /> Llamar ahora
-                  </Button>
+                  <a href="https://www.mites.gob.es/itss/web/Atencion_al_Ciudadano/COMO_DENUNCIAR_ITSS.html">
+                    <Button className="w-full">
+                      <MailIcon className="mr-2 h-4 w-4" /> Denunciar ahora
+                    </Button>
+                  </a>
                 </CardContent>
               </Card>
               <Card className="p-6">
@@ -175,8 +189,10 @@ export default function CampanaRiesgosLaborales() {
                   <CardTitle>Apoyo Psicológico</CardTitle>
                   <CardDescription>Accede a servicios de salud mental</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <Button variant="outline" className="w-full">Agendar cita</Button>
+                <CardContent> 
+                  <a href="https://openheartsayuda.org/mobbing/">
+                    <Button variant="outline" className="w-full">Agendar cita</Button>
+                  </a>
                 </CardContent>
               </Card>
             </div>
@@ -189,8 +205,8 @@ export default function CampanaRiesgosLaborales() {
           <div className="grid md:grid-cols-3 gap-10">
             <div>
               <h3 className="text-lg font-semibold mb-4">Contacto</h3>
-              <p>Email: info@campañariesgoslaborales.es</p>
-              <p>Teléfono: 900 123 456</p>
+              <p>Email: info@1dam3.es</p>
+              <p>Teléfono: 658 893 402</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Enlaces útiles</h3>
